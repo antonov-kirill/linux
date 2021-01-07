@@ -10,6 +10,7 @@
 					[
 						1
 					],
+					"hasInstallRule" : true,
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.7.2"
@@ -53,7 +54,7 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "UDP_CAN::@b272e3872d1f685e215b",
-					"jsonFile" : "target-UDP_CAN-Debug-fb1aa1f86cc921b36f83.json",
+					"jsonFile" : "target-UDP_CAN-Debug-699642a16300d8b722f0.json",
 					"name" : "UDP_CAN",
 					"projectIndex" : 0
 				}

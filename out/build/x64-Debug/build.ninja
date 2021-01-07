@@ -36,6 +36,30 @@ include rules.ninja
 
 
 #############################################
+# Utility command for install/local
+
+build CMakeFiles\install\local.util: CUSTOM_COMMAND all
+  COMMAND = cmd.exe /C "cd /D E:\Projects\_Linux\UDP_CAN\out\build\x64-Debug && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build install\local: phony CMakeFiles\install\local.util
+
+
+#############################################
+# Utility command for install
+
+build CMakeFiles\install.util: CUSTOM_COMMAND all
+  COMMAND = cmd.exe /C "cd /D E:\Projects\_Linux\UDP_CAN\out\build\x64-Debug && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build install: phony CMakeFiles\install.util
+
+
+#############################################
 # Utility command for edit_cache
 
 build CMakeFiles\edit_cache.util: CUSTOM_COMMAND
@@ -56,6 +80,12 @@ build CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
   restat = 1
 
 build rebuild_cache: phony CMakeFiles\rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build list_install_components: phony
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
@@ -100,6 +130,30 @@ build UDP_CAN\UDP_CAN.exe: CXX_EXECUTABLE_LINKER__UDP_CAN_Debug UDP_CAN\CMakeFil
 
 
 #############################################
+# Utility command for install/local
+
+build UDP_CAN\CMakeFiles\install\local.util: CUSTOM_COMMAND UDP_CAN\all
+  COMMAND = cmd.exe /C "cd /D E:\Projects\_Linux\UDP_CAN\out\build\x64-Debug\UDP_CAN && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build UDP_CAN\install\local: phony UDP_CAN\CMakeFiles\install\local.util
+
+
+#############################################
+# Utility command for install
+
+build UDP_CAN\CMakeFiles\install.util: CUSTOM_COMMAND UDP_CAN\all
+  COMMAND = cmd.exe /C "cd /D E:\Projects\_Linux\UDP_CAN\out\build\x64-Debug\UDP_CAN && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build UDP_CAN\install: phony UDP_CAN\CMakeFiles\install.util
+
+
+#############################################
 # Utility command for edit_cache
 
 build UDP_CAN\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
@@ -120,6 +174,12 @@ build UDP_CAN\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
   restat = 1
 
 build UDP_CAN\rebuild_cache: phony UDP_CAN\CMakeFiles\rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build UDP_CAN\list_install_components: phony
 
 # =============================================================================
 # Target aliases.

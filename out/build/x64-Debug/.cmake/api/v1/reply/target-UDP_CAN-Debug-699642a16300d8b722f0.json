@@ -13,11 +13,13 @@
 	{
 		"commands" : 
 		[
-			"add_executable"
+			"add_executable",
+			"install"
 		],
 		"files" : 
 		[
-			"UDP_CAN/CMakeLists.txt"
+			"UDP_CAN/CMakeLists.txt",
+			"CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -29,6 +31,15 @@
 				"file" : 0,
 				"line" : 7,
 				"parent" : 0
+			},
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 11,
+				"parent" : 2
 			}
 		]
 	},
@@ -49,6 +60,20 @@
 		}
 	],
 	"id" : "UDP_CAN::@b272e3872d1f685e215b",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 3,
+				"path" : "bin"
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "E:/Projects/_Linux/UDP_CAN/out/install/x64-Debug"
+		}
+	},
 	"link" : 
 	{
 		"commandFragments" : 

@@ -7,3 +7,5 @@ project ("UDP_CAN")
 
 # Include sub-projects.
 add_subdirectory ("UDP_CAN")
+
+install(TARGETS UDP_CAN DESTINATION bin)
