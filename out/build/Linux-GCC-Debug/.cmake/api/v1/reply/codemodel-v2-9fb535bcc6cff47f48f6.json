@@ -6,13 +6,28 @@
 			[
 				{
 					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
 					"hasInstallRule" : true,
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.0"
 					},
 					"projectIndex" : 0,
-					"source" : ".",
+					"source" : "."
+				},
+				{
+					"build" : "UDP_CAN",
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "UDP_CAN",
 					"targetIndexes" : 
 					[
 						0
@@ -25,7 +40,8 @@
 				{
 					"directoryIndexes" : 
 					[
-						0
+						0,
+						1
 					],
 					"name" : "UDP_CAN",
 					"targetIndexes" : 
@@ -37,9 +53,9 @@
 			"targets" : 
 			[
 				{
-					"directoryIndex" : 0,
-					"id" : "UDP_CAN::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-UDP_CAN-Debug-adbf36a643453f6d8f96.json",
+					"directoryIndex" : 1,
+					"id" : "UDP_CAN::@b272e3872d1f685e215b",
+					"jsonFile" : "target-UDP_CAN-Debug-d839a1c53af31c428b96.json",
 					"name" : "UDP_CAN",
 					"projectIndex" : 0
 				}
@@ -49,8 +65,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/root/.vs/UDP_CAN/b7187c6c-edce-462a-a73a-390de0cca164/out/build/Linux-GCC-Debug",
-		"source" : "/root/.vs/UDP_CAN/b7187c6c-edce-462a-a73a-390de0cca164/src/UDP_CAN"
+		"build" : "/root/.vs/UDP_CAN/f923e49b-23eb-4cb7-a7bc-b43124938243/out/build/Linux-GCC-Debug",
+		"source" : "/root/.vs/UDP_CAN/f923e49b-23eb-4cb7-a7bc-b43124938243/src"
 	},
 	"version" : 
 	{

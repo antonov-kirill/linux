@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/root/.vs/UDP_CAN/b7187c6c-edce-462a-a73a-390de0cca164/out/build/Linux-GCC-Debug"
+			"value" : "/root/.vs/UDP_CAN/f923e49b-23eb-4cb7-a7bc-b43124938243/out/build/Linux-GCC-Debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -579,7 +579,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/root/.vs/UDP_CAN/b7187c6c-edce-462a-a73a-390de0cca164/src/UDP_CAN"
+			"value" : "/root/.vs/UDP_CAN/f923e49b-23eb-4cb7-a7bc-b43124938243/src"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -591,7 +591,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/root/.vs/UDP_CAN/b7187c6c-edce-462a-a73a-390de0cca164/out/install/Linux-GCC-Debug"
+			"value" : "/root/.vs/UDP_CAN/f923e49b-23eb-4cb7-a7bc-b43124938243/out/install/Linux-GCC-Debug"
 		},
 		{
 			"name" : "CMAKE_INSTALL_SO_NO_EXE",
@@ -743,7 +743,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "1"
+			"value" : "2"
 		},
 		{
 			"name" : "CMAKE_OBJCOPY",
@@ -1175,7 +1175,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/root/.vs/UDP_CAN/b7187c6c-edce-462a-a73a-390de0cca164/out/build/Linux-GCC-Debug"
+			"value" : "/root/.vs/UDP_CAN/f923e49b-23eb-4cb7-a7bc-b43124938243/out/build/Linux-GCC-Debug"
 		},
 		{
 			"name" : "UDP_CAN_SOURCE_DIR",
@@ -1187,7 +1187,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/root/.vs/UDP_CAN/b7187c6c-edce-462a-a73a-390de0cca164/src/UDP_CAN"
+			"value" : "/root/.vs/UDP_CAN/f923e49b-23eb-4cb7-a7bc-b43124938243/src"
 		}
 	],
 	"kind" : "cache",

@@ -6,7 +6,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "/root/.vs/UDP_CAN/b7187c6c-edce-462a-a73a-390de0cca164/out/build/Linux-GCC-Debug/CMakeFiles/3.17.3587832-MSVC_2/CMakeSystem.cmake"
+			"path" : "/root/.vs/UDP_CAN/f923e49b-23eb-4cb7-a7bc-b43124938243/out/build/Linux-GCC-Debug/CMakeFiles/3.17.3587832-MSVC_2/CMakeSystem.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -15,11 +15,11 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "/root/.vs/UDP_CAN/b7187c6c-edce-462a-a73a-390de0cca164/out/build/Linux-GCC-Debug/CMakeFiles/3.17.3587832-MSVC_2/CMakeCCompiler.cmake"
+			"path" : "/root/.vs/UDP_CAN/f923e49b-23eb-4cb7-a7bc-b43124938243/out/build/Linux-GCC-Debug/CMakeFiles/3.17.3587832-MSVC_2/CMakeCCompiler.cmake"
 		},
 		{
 			"isGenerated" : true,
-			"path" : "/root/.vs/UDP_CAN/b7187c6c-edce-462a-a73a-390de0cca164/out/build/Linux-GCC-Debug/CMakeFiles/3.17.3587832-MSVC_2/CMakeCXXCompiler.cmake"
+			"path" : "/root/.vs/UDP_CAN/f923e49b-23eb-4cb7-a7bc-b43124938243/out/build/Linux-GCC-Debug/CMakeFiles/3.17.3587832-MSVC_2/CMakeCXXCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -130,13 +130,16 @@
 			"isCMake" : true,
 			"isExternal" : true,
 			"path" : "/root/.vs/cmake/share/cmake-3.17/Modules/CMakeCommonLanguageInclude.cmake"
+		},
+		{
+			"path" : "UDP_CAN/CMakeLists.txt"
 		}
 	],
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "/root/.vs/UDP_CAN/b7187c6c-edce-462a-a73a-390de0cca164/out/build/Linux-GCC-Debug",
-		"source" : "/root/.vs/UDP_CAN/b7187c6c-edce-462a-a73a-390de0cca164/src/UDP_CAN"
+		"build" : "/root/.vs/UDP_CAN/f923e49b-23eb-4cb7-a7bc-b43124938243/out/build/Linux-GCC-Debug",
+		"source" : "/root/.vs/UDP_CAN/f923e49b-23eb-4cb7-a7bc-b43124938243/src"
 	},
 	"version" : 
 	{
