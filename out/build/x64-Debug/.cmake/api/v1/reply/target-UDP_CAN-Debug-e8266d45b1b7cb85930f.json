@@ -29,7 +29,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 7,
+				"line" : 8,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 12,
 				"parent" : 0
 			},
 			{
@@ -39,7 +45,7 @@
 				"command" : 1,
 				"file" : 1,
 				"line" : 11,
-				"parent" : 2
+				"parent" : 3
 			}
 		]
 	},
@@ -65,7 +71,11 @@
 		"destinations" : 
 		[
 			{
-				"backtrace" : 3,
+				"backtrace" : 2,
+				"path" : "bin"
+			},
+			{
+				"backtrace" : 4,
 				"path" : "bin"
 			}
 		],

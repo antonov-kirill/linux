@@ -698,6 +698,66 @@
 			"value" : "UDP_CAN"
 		},
 		{
+			"name" : "CMAKE_PROJECT_VERSION",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "1.0.0"
+		},
+		{
+			"name" : "CMAKE_PROJECT_VERSION_MAJOR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "1"
+		},
+		{
+			"name" : "CMAKE_PROJECT_VERSION_MINOR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "0"
+		},
+		{
+			"name" : "CMAKE_PROJECT_VERSION_PATCH",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "0"
+		},
+		{
+			"name" : "CMAKE_PROJECT_VERSION_TWEAK",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : ""
+		},
+		{
 			"name" : "CMAKE_RC_COMPILER",
 			"properties" : 
 			[
@@ -1035,7 +1095,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "E:/Projects/_Linux/UDP_CAN/out/build/x64-Debug"
+			"value" : "E:/Projects/_Linux/UDP_CAN/out/build/x64-Debug/UDP_CAN"
 		},
 		{
 			"name" : "UDP_CAN_SOURCE_DIR",
@@ -1047,7 +1107,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "E:/Projects/_Linux/UDP_CAN"
+			"value" : "E:/Projects/_Linux/UDP_CAN/UDP_CAN"
 		}
 	],
 	"kind" : "cache",

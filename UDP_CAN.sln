@@ -5,11 +5,6 @@ VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UDP_CAN", "UDP_CAN\UDP_CAN.vcxproj", "{83AEF894-C2FD-4714-B13D-08E78C3743A6}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{988604C2-814B-46B1-868F-41BD7C994169}"
-	ProjectSection(SolutionItems) = preProject
-		CMakeLists.txt = CMakeLists.txt
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
