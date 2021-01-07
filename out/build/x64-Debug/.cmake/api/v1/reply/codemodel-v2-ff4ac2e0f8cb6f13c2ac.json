@@ -12,7 +12,7 @@
 					],
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.8"
+						"string" : "3.7.2"
 					},
 					"projectIndex" : 0,
 					"source" : "."
@@ -21,7 +21,7 @@
 					"build" : "UDP_CAN",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.8"
+						"string" : "3.7.2"
 					},
 					"parentIndex" : 0,
 					"projectIndex" : 0,
