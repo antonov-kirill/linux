@@ -4,4 +4,5 @@ message("OUTPUT_DIRECTORY: " ${OUTPUT_DIRECTORY})
 file(GLOB CPPS "*.cpp")
 
 add_executable (${PROJECT_NAME} ${CPPS})
+add_subdirectory(pugixml)
 set_target_properties(${PROJECT_NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${OUTPUT_DIRECTORY})

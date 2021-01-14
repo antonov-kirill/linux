@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interfaces>
+  <Interface>
+    <CAN_Name>1</CAN_Name>
+    <UDP_IN>4</UDP_IN>
+    <UDP_OUT>7</UDP_OUT>
+  </Interface>
+  <Interface>
+    <CAN_Name>123</CAN_Name>
+    <UDP_IN>456</UDP_IN>
+    <UDP_OUT>789</UDP_OUT>
+  </Interface>
+</Interfaces>

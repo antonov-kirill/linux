@@ -31,6 +31,7 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'" Label="Configuration">
     <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>Remote_GCC_1_0</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'" Label="Configuration">
     <UseDebugLibraries>false</UseDebugLibraries>
@@ -46,10 +47,101 @@
   <ImportGroup Label="Shared" />
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(ProjectDir)pugixml;$(ProjectDir)inc</IncludePath>
+    <SourcePath>$(ProjectDir)pugixml</SourcePath>
+    <LibraryPath>$(ProjectDir)pugixml</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <IncludePath>$(ProjectDir)pugixml;$(ProjectDir)inc</IncludePath>
+    <LibraryPath>$(ProjectDir)pugixml</LibraryPath>
+    <SourcePath>$(ProjectDir)pugixml</SourcePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(ProjectDir)pugixml;$(ProjectDir)inc</IncludePath>
+    <LibraryPath>$(ProjectDir)pugixml</LibraryPath>
+    <SourcePath>$(ProjectDir)pugixml</SourcePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
+    <IncludePath>$(ProjectDir)pugixml;$(ProjectDir)inc</IncludePath>
+    <LibraryPath>$(ProjectDir)pugixml</LibraryPath>
+    <SourcePath>$(ProjectDir)pugixml</SourcePath>
+  </PropertyGroup>
   <ItemGroup>
+    <ClCompile Include="config.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
-  <ItemDefinitionGroup />
+  <ItemGroup>
+    <ClInclude Include="inc\config.h" />
+    <ClInclude Include="pugixml\pugiconfig.hpp" />
+    <ClInclude Include="pugixml\pugixml.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="pugixml\libpugixml.a" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="config.xml" />
+  </ItemGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Link>
+      <AdditionalLibraryDirectories>$(ProjectDir)pugixml</AdditionalLibraryDirectories>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+      <LibraryDependencies>pugixml</LibraryDependencies>
+    </Link>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)inc;$(ProjectDir)pugixml</AdditionalIncludeDirectories>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <Link>
+      <AdditionalLibraryDirectories>$(ProjectDir)pugixml</AdditionalLibraryDirectories>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+      <LibraryDependencies>pugixml</LibraryDependencies>
+    </Link>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)inc;$(ProjectDir)pugixml</AdditionalIncludeDirectories>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)inc;$(ProjectDir)pugixml</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(ProjectDir)pugixml</AdditionalLibraryDirectories>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+      <LibraryDependencies>pugixml</LibraryDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)inc;$(ProjectDir)pugixml</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(ProjectDir)pugixml</AdditionalLibraryDirectories>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+      <LibraryDependencies>pugixml</LibraryDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />
 </Project>
