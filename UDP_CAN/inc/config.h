@@ -10,9 +10,9 @@ public:
 
 	Interface()
 	{
-		CAN_Name = "";
-		UDP_IN = "";
-		UDP_OUT = "";
+		CAN_Name = (char*)"";
+		UDP_IN = (char*)"";
+		UDP_OUT = (char*)"";
 	}
 
 	Interface(char* name, char* in, char* out)

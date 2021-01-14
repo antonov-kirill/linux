@@ -70,6 +70,7 @@
   <ItemGroup>
     <ClCompile Include="config.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="pugixml\pugixml.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="inc\config.h" />
@@ -78,6 +79,9 @@
   </ItemGroup>
   <ItemGroup>
     <Xml Include="config.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="pugixml\libpugixml.a" />
   </ItemGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Link>
