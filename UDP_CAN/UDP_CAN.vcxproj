@@ -77,9 +77,6 @@
     <ClInclude Include="pugixml\pugixml.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <Library Include="pugixml\libpugixml.a" />
-  </ItemGroup>
-  <ItemGroup>
     <Xml Include="config.xml" />
   </ItemGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

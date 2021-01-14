@@ -24,11 +24,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Library Include="pugixml\libpugixml.a">
-      <Filter>pugixml</Filter>
-    </Library>
-  </ItemGroup>
-  <ItemGroup>
     <Xml Include="config.xml" />
   </ItemGroup>
 </Project>
