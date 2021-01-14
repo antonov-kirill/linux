@@ -9,7 +9,7 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {
-	char* path = (char*)"config.h";
+	char* path = (char*)"config.xml";
 	char* dest_ip = (char*)"";
 
 	int ptr = 0;
@@ -17,14 +17,11 @@ int main(int argc, char* argv[])
 	{
 		if (strcmp(argv[ptr], "--path") == 0)
 			path = argv[++ptr];
-		else if (strcmp(argv[ptr], "--dest-ip") == 0)
-			dest_ip = argv[++ptr];
-
 		ptr++;
 	}
 
 	list<Interface> interfaces;
-	GetCongiguration(path, interfaces);
+	GetCongiguration(path, dest_ip,	interfaces);
 
 	getchar();
 	return 0;

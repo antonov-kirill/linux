@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Interfaces>
+<Interfaces ip_out="192.168.1.3">
   <Interface>
     <CAN_Name>1</CAN_Name>
     <UDP_IN>4</UDP_IN>

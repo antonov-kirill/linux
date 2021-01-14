@@ -25,12 +25,12 @@ public:
 
 #ifdef __CONFIG_MAIN_H__
 
-void GetCongiguration(char* path, list<Interface> &interfaces);
-bool ReadConfigFile(char* path, list<Interface> &interfaces);
+void GetCongiguration(char* path, char* dest_ip, list<Interface> &interfaces);
+bool ReadConfigFile(char* path, char* dest_ip, list<Interface> &interfaces);
 
 #else
 
-extern void GetCongiguration(char* path, list<Interface> &interfaces);
+extern void GetCongiguration(char* path, char* dest_ip, list<Interface> &interfaces);
 
 #endif // __CONFIG_MAIN_H__
 
