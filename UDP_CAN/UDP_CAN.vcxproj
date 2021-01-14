@@ -70,7 +70,6 @@
   <ItemGroup>
     <ClCompile Include="config.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="pugixml\pugixml.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="inc\config.h" />

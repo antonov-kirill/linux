@@ -3,9 +3,6 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="config.cpp" />
-    <ClCompile Include="pugixml\pugixml.cpp">
-      <Filter>pugixml</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="inc">
