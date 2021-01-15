@@ -32,7 +32,7 @@ bool ReadConfigFile(char* path, char* dest_ip, list<Interface> &interfaces)
 	try
 	{
 		dest_ip = (char*)doc.child("Interfaces").attribute("ip_out").as_string();
-		printf("\nDestination IP: %s\n", dest_ip);
+		printf("Destination IP: %s\n", dest_ip);
 
 		printf("Num\tCAN\tUDP_IN\tUDP_OUT\n");
 		int cntr = 1;
@@ -47,7 +47,6 @@ bool ReadConfigFile(char* path, char* dest_ip, list<Interface> &interfaces)
 
 			printf("%i\t%s\t%s\t%s\n", cntr++, name, in, out);
 		}
-		printf("\n");
 	}
 	catch (const std::exception&)
 	{
