@@ -89,7 +89,7 @@
       <AdditionalLibraryDirectories>$(ProjectDir)pugixml</AdditionalLibraryDirectories>
       <AdditionalDependencies>
       </AdditionalDependencies>
-      <LibraryDependencies>pugixml</LibraryDependencies>
+      <LibraryDependencies>pugixml;pthread</LibraryDependencies>
     </Link>
     <ClCompile>
       <AdditionalIncludeDirectories>$(ProjectDir)inc;$(ProjectDir)pugixml</AdditionalIncludeDirectories>
@@ -104,7 +104,7 @@
       <AdditionalLibraryDirectories>$(ProjectDir)pugixml</AdditionalLibraryDirectories>
       <AdditionalDependencies>
       </AdditionalDependencies>
-      <LibraryDependencies>pugixml</LibraryDependencies>
+      <LibraryDependencies>pugixml;pthread</LibraryDependencies>
     </Link>
     <ClCompile>
       <AdditionalIncludeDirectories>$(ProjectDir)inc;$(ProjectDir)pugixml</AdditionalIncludeDirectories>
@@ -122,7 +122,7 @@
       <AdditionalLibraryDirectories>$(ProjectDir)pugixml</AdditionalLibraryDirectories>
       <AdditionalDependencies>
       </AdditionalDependencies>
-      <LibraryDependencies>pugixml</LibraryDependencies>
+      <LibraryDependencies>pugixml;pthread</LibraryDependencies>
     </Link>
     <PostBuildEvent>
       <Command>
@@ -137,7 +137,7 @@
       <AdditionalLibraryDirectories>$(ProjectDir)pugixml</AdditionalLibraryDirectories>
       <AdditionalDependencies>
       </AdditionalDependencies>
-      <LibraryDependencies>pugixml</LibraryDependencies>
+      <LibraryDependencies>pugixml;pthread</LibraryDependencies>
     </Link>
     <PostBuildEvent>
       <Command>

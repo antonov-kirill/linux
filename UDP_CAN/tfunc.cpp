@@ -6,7 +6,7 @@
 #define __TFUNC_MAIN_H__
 #include "tfunc.h"
 
-int kbhit(void)
+int kbhit()
 {
 	static const int STDIN = 0;
 	static bool initialized = false;

@@ -5,7 +5,10 @@ file(GLOB CPPS "*.cpp")
 
 add_executable (${PROJECT_NAME} ${CPPS})
 target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_SOURCE_DIR}/UDP_CAN/inc ${CMAKE_SOURCE_DIR}/UDP_CAN/pugixml)
+
 target_link_libraries(${PROJECT_NAME} ${CMAKE_SOURCE_DIR}/UDP_CAN/pugixml/libpugixml.a)
+find_package(Threads REQUIRED)
+target_link_libraries(${PROJECT_NAME} Threads::Threads)
 
 set_target_properties(${PROJECT_NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${OUTPUT_DIRECTORY})
 

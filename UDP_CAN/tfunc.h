@@ -3,12 +3,12 @@
 
 #ifdef __TFUNC_MAIN_H__
 
-int kbhit(void);
+int kbhit();
 int getch();
 
 #else
 
-extern int kbhit(void);
+extern int kbhit();
 extern int getch();
 
 #endif
