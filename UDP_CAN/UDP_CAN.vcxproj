@@ -70,11 +70,13 @@
   <ItemGroup>
     <ClCompile Include="config.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="tfunc.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="inc\config.h" />
     <ClInclude Include="pugixml\pugiconfig.hpp" />
     <ClInclude Include="pugixml\pugixml.hpp" />
+    <ClInclude Include="tfunc.h" />
   </ItemGroup>
   <ItemGroup>
     <Xml Include="config.xml" />
