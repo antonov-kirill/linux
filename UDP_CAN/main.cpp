@@ -4,6 +4,9 @@
 #include <list>
 #include <pthread.h>
 #include <unistd.h>
+#include <sys/socket.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
 
 #include "config.h"
 #include "tfunc.h"
@@ -45,7 +48,10 @@ int main(int argc, char* argv[])
 	printf("Start converting. Press 'q' to exit\n");
 	while (true)
 	{
-
+		for (auto i : interfaces)
+		{
+			
+		}
 
 		// Nonblocking console input
 		if (kbhit())

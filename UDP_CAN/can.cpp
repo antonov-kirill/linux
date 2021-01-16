@@ -1,3 +1,4 @@
+#include "stdio.h"
 #include <list>
 #include <pthread.h>
 #include <unistd.h>
@@ -17,7 +18,12 @@ void* CAN_ThreadFunction(void* arg)
 
 	while (true)
 	{
-		send(i.sout, msg, sizeof(msg), 0);
+		//if (i.id != 1)
+		{
+			if (send(i.sout, msg, sizeof(msg), 0) < 0)
+				printf("Inerface %i: Failed to send a message\n", i.id);
+		}
+
 		sleep(1);
 
 		pthread_testcancel();

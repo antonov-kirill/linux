@@ -29,7 +29,7 @@ bool ReadConfigFile(char* path, std::list<Interface*> &interfaces)
 
 	try
 	{
-		printf("Num\tCAN\tIP_OUT\t\tPORT_IN\tPORT_OUT\n");
+		printf("ID\tCAN\tIP_OUT\t\tPORT_IN\tPORT_OUT\n");
 		int cntr = 1;
 		for (pugi::xml_node node : doc.child("Interfaces"))
 		{

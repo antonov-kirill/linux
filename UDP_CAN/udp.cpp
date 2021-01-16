@@ -3,6 +3,7 @@
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
+#include <arpa/inet.h>
 
 #include "config.h"
 
@@ -36,7 +37,7 @@ bool CreateOutputSocket(Interface* i)
 		struct sockaddr_in addr;
 		addr.sin_family = AF_INET;
 		addr.sin_port = htons(atoi(i->PORT_OUT));
-		addr.sin_addr.s_addr = htonl(atoi(i->IP_OUT));
+		inet_pton(AF_INET, i->IP_OUT, &addr.sin_addr.s_addr);
 
 		connect(sout, (struct sockaddr*)&addr, sizeof(addr));
 		i->sout = sout;
