@@ -4,6 +4,8 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="config.cpp" />
     <ClCompile Include="tfunc.cpp" />
+    <ClCompile Include="can.cpp" />
+    <ClCompile Include="udp.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="inc">
@@ -23,7 +25,13 @@
     <ClInclude Include="pugixml\pugixml.hpp">
       <Filter>pugixml</Filter>
     </ClInclude>
-    <ClInclude Include="tfunc.h">
+    <ClInclude Include="inc\tfunc.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\can.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\udp.h">
       <Filter>inc</Filter>
     </ClInclude>
   </ItemGroup>

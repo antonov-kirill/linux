@@ -3,23 +3,18 @@
 #include "string.h"
 #include <list>
 #include <pthread.h>
-
-using namespace std;
+#include <unistd.h>
 
 #include "config.h"
 #include "tfunc.h"
-
-void * ThreadFunction(void * arg)
-{
-	while (true)
-	{
-		printf("Thread\n");
-	}
-}
+#include "can.h"
+#include "udp.h"
 
 int main(int argc, char* argv[])
 {
 	char* path = (char*)"config.xml";
+
+	// Read command line arguments
 	int ptr = 0;
 	while (ptr < argc)
 	{
@@ -28,18 +23,31 @@ int main(int argc, char* argv[])
 		ptr++;
 	}
 
-	char* dest_ip = (char*)"";
-	list<Interface> interfaces;
-	GetCongiguration(path, dest_ip,	interfaces);
+	// Read the configuration file (config.xml)
+	std::list<Interface*> interfaces;
+	GetCongiguration(path, interfaces);
 
-	pthread_t thread;
-	pthread_create(&thread, NULL, ThreadFunction, NULL);
+	// Create threads, sockets
+	if (interfaces.size() > 0)
+	{
+		for (auto i : interfaces)
+		{
+			if (CreateInputSocket(i) && CreateOutputSocket(i))
+			{
+				if (!pthread_create(&(i->thread), NULL, CAN_ThreadFunction, i))
+					printf("Thread of the interface [%s -> %s:%s] was created\n", i->CAN_Name, i->IP_OUT, i->PORT_OUT);
+			}
+		}
+	}
+	else
+		printf("Interfaces list is empty\n");
 
 	printf("Start converting. Press 'q' to exit\n");
 	while (true)
 	{
-		printf("MainThread\n");
 
+
+		// Nonblocking console input
 		if (kbhit())
 		{
 			char ch = (char)getch();
@@ -50,6 +58,19 @@ int main(int argc, char* argv[])
 			}
 		}
 	}
+
+	// Stop threads, close sockets, objects destruction
+	while (interfaces.size() > 0)
+	{
+		Interface* i = interfaces.front();
+
+		pthread_cancel(i->thread);
+		pthread_join(i->thread, NULL);
+
+		delete i;
+		interfaces.pop_front();
+	}
+
 	exit(0);
 }
 

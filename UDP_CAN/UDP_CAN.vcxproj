@@ -68,15 +68,19 @@
     <SourcePath>$(ProjectDir)pugixml</SourcePath>
   </PropertyGroup>
   <ItemGroup>
+    <ClCompile Include="can.cpp" />
     <ClCompile Include="config.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="tfunc.cpp" />
+    <ClCompile Include="udp.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="inc\can.h" />
     <ClInclude Include="inc\config.h" />
+    <ClInclude Include="inc\tfunc.h" />
+    <ClInclude Include="inc\udp.h" />
     <ClInclude Include="pugixml\pugiconfig.hpp" />
     <ClInclude Include="pugixml\pugixml.hpp" />
-    <ClInclude Include="tfunc.h" />
   </ItemGroup>
   <ItemGroup>
     <Xml Include="config.xml" />
