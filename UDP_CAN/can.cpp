@@ -18,12 +18,8 @@ void* CAN_ThreadFunction(void* arg)
 
 	while (true)
 	{
-		//if (i.id != 1)
-		{
-			if (send(i.sout, msg, sizeof(msg), 0) < 0)
-				printf("Inerface %i: Failed to send a message\n", i.id);
-		}
-
+		if (send(i.sout, msg, sizeof(msg), 0) < 0)
+			printf("Inerface %i: Failed to send a message\n", i.id);
 		sleep(1);
 
 		pthread_testcancel();

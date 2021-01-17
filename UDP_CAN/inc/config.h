@@ -4,24 +4,25 @@
 class Interface
 {
 public:
+	const int buf_rx_size = 64;
+	const int buf_tx_size = 64;
+
 	int id;
+
 	char* CAN_Name;
 	char* IP_OUT;
 	char* PORT_IN;
 	char* PORT_OUT;
+
 	int sin;
 	int sout;
 	pthread_t thread;
 
+	unsigned char* buf_rx;
+	unsigned char* buf_tx;
+
 	Interface()
 	{
-		id = 0;
-		CAN_Name = (char*)"";
-		IP_OUT = (char*)"";
-		PORT_IN = (char*)"";
-		PORT_OUT = (char*)"";
-		sin = -1;
-		sout = -1;
 	}
 
 	Interface(int i, char* name, char* ip, char* in, char* out)
@@ -33,6 +34,8 @@ public:
 		PORT_OUT = out;
 		sin = -1;
 		sout = -1;
+		buf_rx = new unsigned char[buf_rx_size];
+		buf_tx = new unsigned char[buf_tx_size];
 	}
 
 	void CopyFrom(Interface i)
@@ -45,6 +48,8 @@ public:
 		sin = i.sin;
 		sout = i.sout;
 		thread = i.thread;
+		buf_rx = i.buf_rx;
+		buf_tx = i.buf_tx;
 	}
 };
 

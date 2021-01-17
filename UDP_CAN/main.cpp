@@ -4,9 +4,6 @@
 #include <list>
 #include <pthread.h>
 #include <unistd.h>
-#include <sys/socket.h>
-#include <sys/socket.h>
-#include <netinet/in.h>
 
 #include "config.h"
 #include "tfunc.h"
@@ -17,7 +14,7 @@ int main(int argc, char* argv[])
 {
 	char* path = (char*)"config.xml";
 
-	// Read command line arguments
+	/* Read command line arguments */
 	int ptr = 0;
 	while (ptr < argc)
 	{
@@ -26,34 +23,38 @@ int main(int argc, char* argv[])
 		ptr++;
 	}
 
-	// Read the configuration file (config.xml)
+	/* Read the configuration file (config.xml) */
 	std::list<Interface*> interfaces;
 	GetCongiguration(path, interfaces);
 
-	// Create threads, sockets
+	/* Create threads, sockets */
 	if (interfaces.size() > 0)
 	{
 		for (auto i : interfaces)
 		{
-			if (CreateInputSocket(i) && CreateOutputSocket(i))
+			if (UDP_CreateInputSocket(i) && UDP_CreateOutputSocket(i))
 			{
 				if (!pthread_create(&(i->thread), NULL, CAN_ThreadFunction, i))
 					printf("Thread of the interface [%s -> %s:%s] was created\n", i->CAN_Name, i->IP_OUT, i->PORT_OUT);
 			}
+			else
+				printf("Interface %i: Failed to create sockets\n", i->id);
 		}
 	}
 	else
 		printf("Interfaces list is empty\n");
 
 	printf("Start converting. Press 'q' to exit\n");
+	int bytes = 0;
+	unsigned char buf[1024];
 	while (true)
 	{
 		for (auto i : interfaces)
 		{
-			
+			UDP_ReceiveMessage(i);
 		}
 
-		// Nonblocking console input
+		/* Nonblocking console input */
 		if (kbhit())
 		{
 			char ch = (char)getch();
@@ -65,7 +66,7 @@ int main(int argc, char* argv[])
 		}
 	}
 
-	// Stop threads, close sockets, objects destruction
+	/* Stop threads, close sockets, free memory */
 	while (interfaces.size() > 0)
 	{
 		Interface* i = interfaces.front();
@@ -73,6 +74,8 @@ int main(int argc, char* argv[])
 		pthread_cancel(i->thread);
 		pthread_join(i->thread, NULL);
 
+		delete i->buf_rx;
+		delete i->buf_tx;
 		delete i;
 		interfaces.pop_front();
 	}
