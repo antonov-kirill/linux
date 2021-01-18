@@ -5,14 +5,14 @@
 
 bool UDP_CreateInputSocket(Interface* i);
 bool UDP_CreateOutputSocket(Interface* i);
-void UDP_ReceiveMessage(Interface* i);
-bool CheckSocket(Interface* i);
+int UDP_ReceiveFrame(Interface* i);
+bool UDP_CheckSocket(Interface* i);
 
 #else
 
 extern bool UDP_CreateInputSocket(Interface* i);
 extern bool UDP_CreateOutputSocket(Interface* i);
-extern void UDP_ReceiveMessage(Interface* i);
+extern int UDP_ReceiveFrame(Interface* i);
 
 #endif
 
