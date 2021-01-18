@@ -47,8 +47,11 @@ bool ReadConfigFile(char* path, std::list<Interface*> &interfaces)
 			char* pin = (char*)node.child("PORT_IN").text().as_string();
 			char* pout = (char*)node.child("PORT_OUT").text().as_string();
 
+			char * end;
+			unsigned long ci = strtol(can_id, &end, 16);
+
 			/* Create a new interface descriptor and save it into the list of interface descriptors */
-			Interface* i = new Interface(cntr, name, atoi(can_id), strcmp(can_fd, "false"), ip, pin, pout);
+			Interface* i = new Interface(cntr, name, ci, strcmp(can_fd, "false"), ip, pin, pout);
 			interfaces.push_back(i);
 
 			printf("%i\t%s\t\t%s\t%s\t%s\t%s\t%s\n", cntr++, name, can_id, can_fd, ip, pin, pout);
