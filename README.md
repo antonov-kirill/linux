@@ -9,12 +9,12 @@ should be modified. The file is generated in '/bin' directory after the build pr
 
 File 'config.xml' contains interface descriptors. Each block <Interface/> represents an interface descriptor and contains
 the following parameters:
-<CAN_Name>	- char*			        - CAN interface name in Linux (can0/vcan1/...)
-<CAN_ID>	  - int (HEX)		      - ID of the converter in CAN frames
-<CAN_FD>	  - bool (true/false)	- CAN version (false - CAN 2.0; true - CAN FD)
-<PORT_IN>	  - char*			        - input UDP port. Data from the UDP port are being transmited to the CAN interface
-<IP_OUT>	  - char*			        - output IP address. Data received from the CAN interface are being transmited to this IP
-<PORT_OUT>	- char*			        - output UDP port. Data received from the CAN interface are being transmited to this port
+1. <CAN_Name>	- char*			          - CAN interface name in Linux (can0/vcan1/...)
+2. <CAN_ID>	  - int (HEX)		       - ID of the converter in CAN frames
+3. <CAN_FD>	  - bool (true/false)	- CAN version (false - CAN 2.0; true - CAN FD)
+4. <PORT_IN>	 - char*			          - input UDP port. Data from the UDP port are being transmited to the CAN interface
+5. <IP_OUT>	  - char*			          - output IP address. Data received from the CAN interface are being transmited to this IP
+6. <PORT_OUT>	- char*			          - output UDP port. Data received from the CAN interface are being transmited to this port
 
 Note: parameters <CAN_NAME>, <CAN_ID>, <CAN_FD>, <IP_OUT>, <PORT_OUT> can be the same for several interfaces,
 but the parameter <PORT_IN> must be unique for each interface.
@@ -35,12 +35,12 @@ Command line arguments:
 
 Файл config.xml содержит дескрипторы интерфейсов. Каждый блок <Interface/> представляет собой дескриптор интерфейса 
 и содержит следующие параметры:
-<CAN_Name>	- char*			- имя интерфейса CAN в системе Linux (can0/vcan1/...)
-<CAN_ID>	- int (HEX)		- идентификатор конвертера в CAN фреймах
-<CAN_FD>	- bool (true/false)	- выерсия CAN (false - CAN 2.0; true - CAN FD)
-<PORT_IN>	- char*			- UDP-порт, откуда считываются данные, предназначенные для отправки в CAN
-<IP_OUT>	- char*			- IP адрес, на который отправляются данные, считанные из CAN
-<PORT_OUT>	- char*			- UDP-порт, на который отправляются данные, считанные из CAN
+1. <CAN_Name>  - char*             - имя интерфейса CAN в системе Linux (can0/vcan1/...)
+2. <CAN_ID>    - int (HEX)         - идентификатор конвертера в CAN фреймах
+3. <CAN_FD>    - bool (true/false) - выерсия CAN (false - CAN 2.0; true - CAN FD)
+4. <PORT_IN>	  - char*             - UDP-порт, откуда считываются данные, предназначенные для отправки в CAN
+5. <IP_OUT>	   - char*             - IP адрес, на который отправляются данные, считанные из CAN
+6. <PORT_OUT>	 - char*             - UDP-порт, на который отправляются данные, считанные из CAN
 
 Обратите внимание: параметры <CAN_NAME>, <CAN_ID>, <CAN_FD>, <IP_OUT>, <PORT_OUT> могут быть одинаковыми для разных интерфейсов,
 но параметр <PORT_IN> должен быть уникальным для каждого интерфейса.
